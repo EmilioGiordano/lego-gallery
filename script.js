@@ -493,7 +493,7 @@ function render(now) {
     Math.sin(orbitPitch) * cameraDistance,
     Math.cos(orbitYaw) * horizontalDistance,
   );
-  camera.lookAt(0, mobile ? -40 : -180, 0);
+  camera.lookAt(0, 6, 0);
   shipRoot.rotation.y = mobile ? -0.5 : -0.12;
   stars.rotation.y = time * 0.000006;
   halo.rotation.z = -time * 0.00004;
