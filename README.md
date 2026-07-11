@@ -123,11 +123,32 @@ The runtime expects `assets/audio/lego-build-process.mp3` and `assets/audio/lego
 │   │   └── geometries.zip     Deduplicated geometry archive
 │   └── vendor/                Browser-ready Three.js and JSZip modules
 ├── docs/screenshots/          Project imagery used in this document
+├── src/
+│   ├── animation/             Assembly timeline and per-piece motion
+│   ├── audio/                 Optional Web Audio synchronization
+│   ├── config/sets.js         Per-set assets, camera, and animation settings
+│   ├── controls/              Reusable orbit and zoom input
+│   ├── model/                 Geometry parsing and instanced-model loading
+│   ├── rendering/             Three.js stage, lighting, and environment
+│   └── ui/                    DOM state and telemetry updates
 ├── tools/prepare-model.py     Mecabricks-to-runtime conversion pipeline
 ├── index.html                 Semantic interface structure
 ├── styles.css                 Responsive presentation and instrumentation
-└── script.js                  Loading, reconstruction, animation, audio, and input
+└── script.js                  Small application composition root
 ```
+
+## Adding another LEGO set
+
+The runtime is model-agnostic. A set definition in `src/config/sets.js` selects its manifest and geometry archive, camera framing, material effects, audio, labels, and assembly parameters. Loading, legacy geometry conversion, instancing, controls, sound, telemetry, and the render loop are shared.
+
+To introduce another set:
+
+1. Process its Mecabricks export into a scene manifest and geometry archive.
+2. Place those runtime assets under a new `assets/<set-id>/` directory.
+3. Add a definition to `legoSets` in `src/config/sets.js`.
+4. Open the experience with `?set=<set-id>`.
+
+Set-specific tuning remains data rather than branching application logic. A differently sized model can define its own camera distances and rotation; a different build can adjust bag timing, vortex radius, assembly duration, completion label, and emissive materials without changing the shared modules.
 
 ## Running locally
 
