@@ -254,11 +254,73 @@ function parseLegacyGeometry(data) {
   return geometry;
 }
 
-function flexibleGeometry(length) {
-  const geometry = new THREE.CylinderGeometry(2.2, 2.2, length, 8, 8);
+function mergeGeometryParts(parts) {
+  const expanded = parts.map((part) => (part.index ? part.toNonIndexed() : part));
+  const vertexCount = expanded.reduce(
+    (total, part) => total + part.getAttribute("position").count,
+    0,
+  );
+  const positions = new Float32Array(vertexCount * 3);
+  const normals = new Float32Array(vertexCount * 3);
+  let offset = 0;
+
+  expanded.forEach((part) => {
+    positions.set(part.getAttribute("position").array, offset * 3);
+    normals.set(part.getAttribute("normal").array, offset * 3);
+    offset += part.getAttribute("position").count;
+  });
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute("normal", new THREE.BufferAttribute(normals, 3));
   geometry.computeBoundingSphere();
   geometry.userData.materialCount = 1;
   return geometry;
+}
+
+function flexibleGeometry(descriptor) {
+  const points = descriptor.points.map(
+    ([x, y, z]) => new THREE.Vector3(x, y, z),
+  );
+  const curveForOffset = (offset = 0) =>
+    new THREE.CubicBezierCurve3(
+      ...points.map((point) => point.clone().add(new THREE.Vector3(offset, 0, 0))),
+    );
+
+  if (descriptor.kind === "hose") {
+    const geometry = new THREE.TubeGeometry(curveForOffset(), 72, 3.1, 8, false);
+    const positions = geometry.getAttribute("position");
+    const curve = curveForOffset();
+    for (let ring = 0; ring <= 72; ring += 1) {
+      const center = curve.getPoint(ring / 72);
+      const ribScale = ring % 2 === 0 ? 1.16 : 0.92;
+      for (let side = 0; side <= 8; side += 1) {
+        const vertex = ring * 9 + side;
+        temporaryPosition.fromBufferAttribute(positions, vertex);
+        temporaryPosition.sub(center).multiplyScalar(ribScale).add(center);
+        positions.setXYZ(vertex, temporaryPosition.x, temporaryPosition.y, temporaryPosition.z);
+      }
+    }
+    geometry.computeVertexNormals();
+    geometry.computeBoundingSphere();
+    geometry.userData.materialCount = 1;
+    return geometry;
+  }
+
+  const parts = [
+    new THREE.TubeGeometry(curveForOffset(-10), 56, 1.35, 6, false),
+    new THREE.TubeGeometry(curveForOffset(10), 56, 1.35, 6, false),
+  ];
+  const centerCurve = curveForOffset();
+  for (let index = 0; index < 15; index += 1) {
+    const point = centerCurve.getPoint(index / 14);
+    const rung = new THREE.CylinderGeometry(1.05, 1.05, 20, 6);
+    const transform = new THREE.Matrix4().makeRotationZ(Math.PI / 2);
+    transform.setPosition(point);
+    rung.applyMatrix4(transform);
+    parts.push(rung);
+  }
+  return mergeGeometryParts(parts);
 }
 
 function materialFor(reference) {
@@ -270,13 +332,16 @@ function materialFor(reference) {
   };
   const transparent = Boolean(definition.transparent);
   const isMetal = /metal|chrome/i.test(definition.kind);
+  const isEngineGlow = reference === 42;
   const material = new THREE.MeshStandardMaterial({
     color: definition.hex,
     roughness: isMetal ? 0.24 : 0.66,
     metalness: isMetal ? 0.72 : 0.06,
     transparent,
-    opacity: transparent ? 0.46 : 1,
+    opacity: transparent ? (isEngineGlow ? 0.82 : 0.46) : 1,
     depthWrite: !transparent,
+    emissive: isEngineGlow ? definition.hex : 0x000000,
+    emissiveIntensity: isEngineGlow ? 0.85 : 0,
   });
   materialCache.set(reference, material);
   return material;
