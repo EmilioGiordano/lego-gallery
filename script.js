@@ -89,6 +89,10 @@ const keyLight = new THREE.DirectionalLight(0xffe7c3, 7.4);
 keyLight.position.set(-500, 900, 450);
 scene.add(keyLight);
 
+const undersideLight = new THREE.DirectionalLight(0x9fb9c5, 3.2);
+undersideLight.position.set(0, -900, 260);
+scene.add(undersideLight);
+
 const rimLight = new THREE.PointLight(0x55b9dc, 420000, 2200);
 rimLight.position.set(-700, 260, -620);
 scene.add(rimLight);
@@ -487,6 +491,7 @@ function render(now) {
 
   const mobile = innerWidth < 760;
   const cameraDistance = (mobile ? 3000 : 2050) * orbitZoom;
+  scene.fog.density = 0.00052 * (0.68 / orbitZoom);
   const horizontalDistance = Math.cos(orbitPitch) * cameraDistance;
   camera.position.set(
     Math.sin(orbitYaw) * horizontalDistance,
@@ -664,7 +669,7 @@ canvas.addEventListener("pointermove", (event) => {
   const deltaX = event.clientX - pointerStartX;
   const deltaY = event.clientY - pointerStartY;
   targetOrbitYaw -= deltaX * 0.006;
-  targetOrbitPitch = clamp(targetOrbitPitch + deltaY * 0.0045, 0.16, 1.34);
+  targetOrbitPitch = clamp(targetOrbitPitch + deltaY * 0.0045, -1.34, 1.34);
   pointerStartX = event.clientX;
   pointerStartY = event.clientY;
 });
@@ -684,7 +689,7 @@ canvas.addEventListener(
   "wheel",
   (event) => {
     event.preventDefault();
-    targetOrbitZoom = clamp(targetOrbitZoom + event.deltaY * 0.00075, 0.68, 1.55);
+    targetOrbitZoom = clamp(targetOrbitZoom + event.deltaY * 0.00075, 0.4, 1.55);
   },
   { passive: false },
 );
