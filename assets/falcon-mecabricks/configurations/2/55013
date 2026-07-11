@@ -1,0 +1,1 @@
+{"name":"55013","type":"solid","geometry":{"file":"55013.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[0,0,0,1]}}],"normals":[{"file":"55013_1.png","uv":0,"repeat":false}],"bumps":[{"file":"55013_1.png","uv":1,"strength":1}],"roughness":[{"scale":1,"strength":0.1}],"materials":[],"decorationUvs":[]}

@@ -1,0 +1,1 @@
+{"name":"3937","type":"solid","geometry":{"file":"3937.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[0,0,0,1]}},{"transform":{"position":[0,5.6,0],"quaternion":[0,0,0,1]}}],"normals":[{"file":"3937_1.png","uv":0,"bevel":true,"repeat":false}],"bumps":[],"roughness":[],"materials":[],"decorationUvs":[]}

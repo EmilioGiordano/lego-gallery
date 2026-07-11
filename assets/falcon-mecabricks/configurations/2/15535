@@ -1,0 +1,1 @@
+{"name":"15535","type":"solid","geometry":{"file":"15535.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[0,0,0,1]}},{"transform":{"position":[0,3.2,0],"quaternion":[1,0,0,0]}}],"normals":[{"file":"15535_1.png","uv":0,"repeat":false}],"bumps":[],"roughness":[],"materials":[],"decorationUvs":[1]}

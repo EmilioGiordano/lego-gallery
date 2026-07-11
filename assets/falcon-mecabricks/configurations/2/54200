@@ -1,0 +1,1 @@
+{"name":"54200","type":"solid","geometry":{"file":"54200.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[0,0,0,1]}}],"normals":[{"file":"54200_1.png","uv":0,"bevel":true,"repeat":false}],"bumps":[{"file":"54200_1.png","uv":2,"strength":1}],"roughness":[],"materials":[],"decorationUvs":[1]}

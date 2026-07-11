@@ -1,0 +1,1 @@
+{"name":"2723","type":"solid","geometry":{"file":"2723.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[-0.707107,0,0,0.707107]}}],"normals":[{"file":"2723_1.png","uv":0,"repeat":false}],"bumps":[{"file":"2723_1.png","uv":1,"strength":1}],"roughness":[],"materials":[],"decorationUvs":[2]}

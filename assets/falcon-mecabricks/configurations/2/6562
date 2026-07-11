@@ -1,0 +1,1 @@
+{"name":"6562","type":"solid","geometry":{"file":"6562.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[0,0,0,1]}}],"normals":[{"file":"6562_1.png","uv":0,"repeat":false}],"bumps":[{"file":"6562_1.png","uv":1,"strength":1}],"roughness":[],"materials":[],"decorationUvs":[]}

@@ -1,0 +1,1 @@
+{"name":"43093","type":"solid","geometry":{"file":"43093.json","extras":{"logos":[],"knobs":[],"pins":[],"tubes":[]}},"points":[{"transform":{"position":[0,0,0],"quaternion":[0,0,0,1]}}],"normals":[{"file":"43093_1.png","uv":0,"bevel":true,"repeat":false}],"bumps":[{"file":"43093_1.png","uv":1,"strength":1}],"roughness":[],"materials":[],"decorationUvs":[]}
