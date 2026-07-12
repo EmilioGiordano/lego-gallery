@@ -19,6 +19,7 @@ let activeSet = resolveLegoSet();
 const stage = createStage(canvas, activeSet);
 const orbit = createOrbitController(canvas, activeSet.camera);
 const sound = createSoundController({ assets: activeSet.audio, ui });
+canvas.addEventListener("pointerdown", () => sound.unlock(), { passive: true });
 const modelCache = new Map();
 const loadingModels = new Map();
 let model;
