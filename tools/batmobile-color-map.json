@@ -1,0 +1,787 @@
+{
+  "customMaterials": {
+    "9001": {
+      "hex": "#AEAFAF",
+      "name": "Pearl Titanium",
+      "kind": "pearlescent",
+      "transparent": false
+    },
+    "9002": {
+      "hex": "#B5B6B6",
+      "name": "Light Bluish Gray",
+      "kind": "solid",
+      "transparent": false
+    }
+  },
+  "designToMaterial": {
+    "4697": 26,
+    "95344": 9001,
+    "28964": 26,
+    "95199": 26,
+    "55981": 26,
+    "55982": 26,
+    "92402": 26,
+    "56891": 26,
+    "50231": 26,
+    "3320": 9001,
+    "115893": 9001,
+    "3814": 9001,
+    "3815": 9001,
+    "3816": 9001,
+    "3817": 9001,
+    "3818v2": 9001,
+    "3819v2": 9001,
+    "3820v2": 9001,
+    "78643": 9001,
+    "8035": 9001,
+    "3626d328": 283,
+    "4073": 41,
+    "18747": 9002
+  },
+  "unmatched": [
+    [
+      "11212",
+      "Plate 3X3"
+    ],
+    [
+      "11212",
+      "Plate 3X3"
+    ],
+    [
+      "14769",
+      "Flat Tile 2X2, Round"
+    ],
+    [
+      "21712",
+      "Angle Plate 1X2 / 2X2"
+    ],
+    [
+      "21712",
+      "Angle Plate 1X2 / 2X2"
+    ],
+    [
+      "21712",
+      "Angle Plate 1X2 / 2X2"
+    ],
+    [
+      "2412v2",
+      "Radiator Grille 1X2"
+    ],
+    [
+      "2412v2",
+      "Radiator Grille 1X2"
+    ],
+    [
+      "2412v2",
+      "Radiator Grille 1X2"
+    ],
+    [
+      "24201",
+      "Plate W. Half Bow 1X2X2/3 Inv."
+    ],
+    [
+      "24201",
+      "Plate W. Half Bow 1X2X2/3 Inv."
+    ],
+    [
+      "24201",
+      "Plate W. Half Bow 1X2X2/3 Inv."
+    ],
+    [
+      "24201",
+      "Plate W. Half Bow 1X2X2/3 Inv."
+    ],
+    [
+      "24201",
+      "Plate W. Half Bow 1X2X2/3 Inv."
+    ],
+    [
+      "24201",
+      "Plate W. Half Bow 1X2X2/3 Inv."
+    ],
+    [
+      "2431",
+      "Flat Tile 1X4"
+    ],
+    [
+      "2431",
+      "Flat Tile 1X4"
+    ],
+    [
+      "3001",
+      "Brick 2X4"
+    ],
+    [
+      "3021",
+      "Plate 2X3"
+    ],
+    [
+      "3021",
+      "Plate 2X3"
+    ],
+    [
+      "3022",
+      "Plate 2X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3023",
+      "Plate 1X2"
+    ],
+    [
+      "3032",
+      "Plate 4X6"
+    ],
+    [
+      "3032",
+      "Plate 4X6"
+    ],
+    [
+      "32018",
+      "Technic Brick 1X14"
+    ],
+    [
+      "32018",
+      "Technic Brick 1X14"
+    ],
+    [
+      "32123",
+      "1/2 Bush"
+    ],
+    [
+      "32123",
+      "1/2 Bush"
+    ],
+    [
+      "32209",
+      "Double Cross Axle 5.5M"
+    ],
+    [
+      "32209",
+      "Double Cross Axle 5.5M"
+    ],
+    [
+      "32209",
+      "Double Cross Axle 5.5M"
+    ],
+    [
+      "32209",
+      "Double Cross Axle 5.5M"
+    ],
+    [
+      "32316",
+      "Technic 5M Beam"
+    ],
+    [
+      "32316",
+      "Technic 5M Beam"
+    ],
+    [
+      "32556",
+      "3M Connector Peg"
+    ],
+    [
+      "32556",
+      "3M Connector Peg"
+    ],
+    [
+      "3504",
+      "Left Roof Tile 2X5, 45\u00b0"
+    ],
+    [
+      "3504",
+      "Left Roof Tile 2X5, 45\u00b0"
+    ],
+    [
+      "3505",
+      "Right Roof Tile 2X5, 45\u00b0"
+    ],
+    [
+      "3505",
+      "Right Roof Tile 2X5, 45\u00b0"
+    ],
+    [
+      "3666",
+      "Plate 1X6"
+    ],
+    [
+      "3666",
+      "Plate 1X6"
+    ],
+    [
+      "3666",
+      "Plate 1X6"
+    ],
+    [
+      "3666",
+      "Plate 1X6"
+    ],
+    [
+      "3673",
+      "Connector Peg"
+    ],
+    [
+      "3673",
+      "Connector Peg"
+    ],
+    [
+      "3673",
+      "Connector Peg"
+    ],
+    [
+      "3673",
+      "Connector Peg"
+    ],
+    [
+      "3673",
+      "Connector Peg"
+    ],
+    [
+      "3673",
+      "Connector Peg"
+    ],
+    [
+      "3710",
+      "Plate 1X4"
+    ],
+    [
+      "3710",
+      "Plate 1X4"
+    ],
+    [
+      "37352",
+      "Brick 1X2 Outside Half Bow"
+    ],
+    [
+      "37352",
+      "Brick 1X2 Outside Half Bow"
+    ],
+    [
+      "3894",
+      "Technic Brick 1X6"
+    ],
+    [
+      "3894",
+      "Technic Brick 1X6"
+    ],
+    [
+      "44860",
+      "Plate 1X1 W. Holder"
+    ],
+    [
+      "44860",
+      "Plate 1X1 W. Holder"
+    ],
+    [
+      "50949",
+      "Plate 1X2 W. Spoiler"
+    ],
+    [
+      "74695",
+      "Beam 1X2 W. Cross And Hole"
+    ],
+    [
+      "74695",
+      "Beam 1X2 W. Cross And Hole"
+    ],
+    [
+      "93095",
+      "Foot, Plate"
+    ],
+    [
+      "93274",
+      "Angle Plate 1X2/2X4"
+    ],
+    [
+      "93274",
+      "Angle Plate 1X2/2X4"
+    ],
+    [
+      "93274",
+      "Angle Plate 1X2/2X4"
+    ],
+    [
+      "93274",
+      "Angle Plate 1X2/2X4"
+    ],
+    [
+      "99207",
+      "Angular Plate 1.5 Bot. 1X2 2/2"
+    ],
+    [
+      "99207",
+      "Angular Plate 1.5 Bot. 1X2 2/2"
+    ],
+    [
+      "11476",
+      "Plate 1X2 W. 1 Horizontal Snap"
+    ],
+    [
+      "13547",
+      "Brick 1X4X1 Inv. Bow"
+    ],
+    [
+      "13547",
+      "Brick 1X4X1 Inv. Bow"
+    ],
+    [
+      "15068",
+      "Plate W. Bow 2X2X2/3"
+    ],
+    [
+      "18674",
+      "Plate Round W. 1 Knob"
+    ],
+    [
+      "26601",
+      "Plate 2X2, Corner, 45\u00b0"
+    ],
+    [
+      "26601",
+      "Plate 2X2, Corner, 45\u00b0"
+    ],
+    [
+      "28653",
+      "Plate 1X2, transparent"
+    ],
+    [
+      "28653",
+      "Plate 1X2, transparent"
+    ],
+    [
+      "29119",
+      "Right Plate 1X2 W. Bow, 45\u00b0 Cut"
+    ],
+    [
+      "29120",
+      "Left Plate 1X2 W. Bow, 45\u00b0 Cut"
+    ],
+    [
+      "3020",
+      "Plate 2X4"
+    ],
+    [
+      "3021",
+      "Plate 2X3"
+    ],
+    [
+      "3021",
+      "Plate 2X3"
+    ],
+    [
+      "32059",
+      "Plate 4X6 26\u00b0"
+    ],
+    [
+      "3388",
+      "Left Design Element 1X5X11/3 No.1"
+    ],
+    [
+      "3388",
+      "Left Design Element 1X5X11/3 No.1"
+    ],
+    [
+      "3389",
+      "Right Design Element 1X5X11/3 No. 1"
+    ],
+    [
+      "3389",
+      "Right Design Element 1X5X11/3 No. 1"
+    ],
+    [
+      "35464",
+      "Roof Tile 1X1 45\u00b0 Without knobs"
+    ],
+    [
+      "35464",
+      "Roof Tile 1X1 45\u00b0 Without knobs"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "35480",
+      "Plate 1X2 Rounded W. Through Holes"
+    ],
+    [
+      "3666",
+      "Plate 1X6"
+    ],
+    [
+      "3710",
+      "Plate 1X4"
+    ],
+    [
+      "3710",
+      "Plate 1X4"
+    ],
+    [
+      "3795",
+      "Plate 2X6"
+    ],
+    [
+      "3795",
+      "Plate 2X6"
+    ],
+    [
+      "4286",
+      "Roof Tile 1X3/25\u00b0"
+    ],
+    [
+      "4286",
+      "Roof Tile 1X3/25\u00b0"
+    ],
+    [
+      "43722",
+      "Plate 2X3 W. Angle, Right"
+    ],
+    [
+      "43723",
+      "Plate 2X3 W. Angle, Left"
+    ],
+    [
+      "44842",
+      "Plate 1X1 W. Up Right Holder"
+    ],
+    [
+      "44842",
+      "Plate 1X1 W. Up Right Holder"
+    ],
+    [
+      "44842",
+      "Plate 1X1 W. Up Right Holder"
+    ],
+    [
+      "44861",
+      "Plate 1X2 W. Vertical Grip"
+    ],
+    [
+      "44861",
+      "Plate 1X2 W. Vertical Grip"
+    ],
+    [
+      "44861",
+      "Plate 1X2 W. Vertical Grip"
+    ],
+    [
+      "44861",
+      "Plate 1X2 W. Vertical Grip"
+    ],
+    [
+      "44873",
+      "Holder \u00d83.2 W. Tube \u00d83.2"
+    ],
+    [
+      "44873",
+      "Holder \u00d83.2 W. Tube \u00d83.2"
+    ],
+    [
+      "47457",
+      "Plate W. Bows 2X2"
+    ],
+    [
+      "4865v2",
+      "Wall Element 1X2X1"
+    ],
+    [
+      "4865v2",
+      "Wall Element 1X2X1"
+    ],
+    [
+      "5404",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "5404",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "5404",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "5404",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "61409",
+      "Roof Tile W. Lattice 1X2X2/3"
+    ],
+    [
+      "61409",
+      "Roof Tile W. Lattice 1X2X2/3"
+    ],
+    [
+      "62360",
+      "Cockpit W. Bow 3X6X1"
+    ],
+    [
+      "85984",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "85984",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "85984",
+      "Roof Tile 1X2X2/3"
+    ],
+    [
+      "99206",
+      "Plate 2X2X2/3 W. 2 Hor. Knob"
+    ],
+    [
+      "99206",
+      "Plate 2X2X2/3 W. 2 Hor. Knob"
+    ],
+    [
+      "15712",
+      "Plate 1X1 W. Up Right Holder"
+    ],
+    [
+      "15712",
+      "Plate 1X1 W. Up Right Holder"
+    ],
+    [
+      "18646",
+      "Plate Half Circle 3X6 With Cut"
+    ],
+    [
+      "19952",
+      "Hinge Plate 1X2, Base"
+    ],
+    [
+      "19952",
+      "Hinge Plate 1X2, Base"
+    ],
+    [
+      "19953",
+      "Hinge Plate 1X2, Top"
+    ],
+    [
+      "19953",
+      "Hinge Plate 1X2, Top"
+    ],
+    [
+      "22385",
+      "Flat Tile 2X3 W. Angle"
+    ],
+    [
+      "22385",
+      "Flat Tile 2X3 W. Angle"
+    ],
+    [
+      "22385",
+      "Flat Tile 2X3 W. Angle"
+    ],
+    [
+      "22385",
+      "Flat Tile 2X3 W. Angle"
+    ],
+    [
+      "2412v2",
+      "Radiator Grille 1X2"
+    ],
+    [
+      "2540",
+      "Plate 1X2 W. Stick"
+    ],
+    [
+      "2540",
+      "Plate 1X2 W. Stick"
+    ],
+    [
+      "3021",
+      "Plate 2X3"
+    ],
+    [
+      "3021",
+      "Plate 2X3"
+    ],
+    [
+      "30374",
+      "Light Sword Blade"
+    ],
+    [
+      "30374",
+      "Light Sword Blade"
+    ],
+    [
+      "32123",
+      "1/2 Bush"
+    ],
+    [
+      "32123",
+      "1/2 Bush"
+    ],
+    [
+      "3937",
+      "Rocker Bearing 1X2"
+    ],
+    [
+      "3937",
+      "Rocker Bearing 1X2"
+    ],
+    [
+      "3937",
+      "Rocker Bearing 1X2"
+    ],
+    [
+      "3937",
+      "Rocker Bearing 1X2"
+    ],
+    [
+      "42446",
+      "Mini Fig. Back Plate W. Knob"
+    ],
+    [
+      "42446",
+      "Mini Fig. Back Plate W. Knob"
+    ],
+    [
+      "43722",
+      "Plate 2X3 W. Angle, Right"
+    ],
+    [
+      "43722",
+      "Plate 2X3 W. Angle, Right"
+    ],
+    [
+      "43723",
+      "Plate 2X3 W. Angle, Left"
+    ],
+    [
+      "43723",
+      "Plate 2X3 W. Angle, Left"
+    ],
+    [
+      "44676",
+      "Banner 26\u00b0 W. 2 Holders"
+    ],
+    [
+      "44676",
+      "Banner 26\u00b0 W. 2 Holders"
+    ],
+    [
+      "44676",
+      "Banner 26\u00b0 W. 2 Holders"
+    ],
+    [
+      "44676",
+      "Banner 26\u00b0 W. 2 Holders"
+    ],
+    [
+      "44676",
+      "Banner 26\u00b0 W. 2 Holders"
+    ],
+    [
+      "48729",
+      "Stick \u00d83.2 W. Holder"
+    ],
+    [
+      "48729",
+      "Stick \u00d83.2 W. Holder"
+    ],
+    [
+      "52031",
+      "Plate 4X6X2/3"
+    ],
+    [
+      "60478",
+      "Plate 1X2 W. Shaft \u00d83.2"
+    ],
+    [
+      "60478",
+      "Plate 1X2 W. Shaft \u00d83.2"
+    ],
+    [
+      "6134",
+      "Plate 2X2 Rocking"
+    ],
+    [
+      "6134",
+      "Plate 2X2 Rocking"
+    ],
+    [
+      "6134",
+      "Plate 2X2 Rocking"
+    ],
+    [
+      "6134",
+      "Plate 2X2 Rocking"
+    ],
+    [
+      "77598",
+      "Wheel Fork 4X5 W. \u00d84.85 Hole"
+    ],
+    [
+      "77598",
+      "Wheel Fork 4X5 W. \u00d84.85 Hole"
+    ],
+    [
+      "98834",
+      "Spoiler W. Shaft \u00d83.2"
+    ],
+    [
+      "98834",
+      "Spoiler W. Shaft \u00d83.2"
+    ],
+    [
+      "99021",
+      "Bush W. Connecting Piece"
+    ],
+    [
+      "99021",
+      "Bush W. Connecting Piece"
+    ]
+  ]
+}

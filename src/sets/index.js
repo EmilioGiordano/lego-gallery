@@ -1,6 +1,7 @@
+import { batmobile } from "./batmobile.js";
 import { millenniumFalcon } from "./millennium-falcon.js";
 
-export const legoSets = Object.freeze([millenniumFalcon]);
+export const legoSets = Object.freeze([millenniumFalcon, batmobile]);
 
 const setsByRoute = new Map(
   legoSets.flatMap((set) => [

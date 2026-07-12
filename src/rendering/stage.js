@@ -12,29 +12,36 @@ export function createStage(canvas, set) {
   renderer.setSize(innerWidth, innerHeight);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.55;
+  renderer.toneMappingExposure = set.rendering?.exposure ?? 1.55;
   renderer.setClearColor(0x02050a, 1);
 
   const scene = new THREE.Scene();
   scene.fog = new THREE.FogExp2(0x02050a, 0.00052);
   const camera = new THREE.PerspectiveCamera(34, innerWidth / innerHeight, 1, 7000);
   camera.position.set(0, 1040, 1120);
+  const lightScale = set.rendering?.lightScale ?? 1;
+  const keyLightColor = set.rendering?.keyLightColor ?? 0xffe7c3;
+  const warmLightScale = set.rendering?.warmLightScale ?? 1;
 
-  scene.add(new THREE.HemisphereLight(0xd8e6e9, 0x171c24, 4.2));
+  scene.add(new THREE.HemisphereLight(0xd8e6e9, 0x171c24, 4.2 * lightScale));
 
-  const keyLight = new THREE.DirectionalLight(0xffe7c3, 7.4);
+  const keyLight = new THREE.DirectionalLight(keyLightColor, 7.4 * lightScale);
   keyLight.position.set(-500, 900, 450);
   scene.add(keyLight);
 
-  const undersideLight = new THREE.DirectionalLight(0x9fb9c5, 3.2);
+  const undersideLight = new THREE.DirectionalLight(0x9fb9c5, 3.2 * lightScale);
   undersideLight.position.set(0, -900, 260);
   scene.add(undersideLight);
 
-  const rimLight = new THREE.PointLight(0x55b9dc, 420000, 2200);
+  const rimLight = new THREE.PointLight(0x55b9dc, 420000 * lightScale, 2200);
   rimLight.position.set(-700, 260, -620);
   scene.add(rimLight);
 
-  const warmLight = new THREE.PointLight(0xef4b2f, 190000, 1700);
+  const warmLight = new THREE.PointLight(
+    0xef4b2f,
+    190000 * lightScale * warmLightScale,
+    1700,
+  );
   warmLight.position.set(650, 380, 560);
   scene.add(warmLight);
 

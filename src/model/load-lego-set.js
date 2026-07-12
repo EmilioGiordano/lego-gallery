@@ -3,24 +3,46 @@ import JSZip from "../../assets/vendor/jszip.module.js";
 import { clamp, hash, TAU } from "../math.js";
 import { createFlexibleGeometry, parseLegacyGeometry } from "./geometry.js";
 
+function resolveMaterialDefinition(sceneData, set, reference) {
+  const base = sceneData.materials[String(reference)] || {
+    hex: "#A3A2A4",
+    transparent: false,
+    kind: "solid",
+  };
+  const override = set.material?.overrides?.[reference];
+  return override ? { ...base, ...override } : base;
+}
+
+function materialSurfaceProperties(kind = "solid") {
+  if (/chrome/i.test(kind)) {
+    return { roughness: 0.18, metalness: 0.88 };
+  }
+  if (/metal/i.test(kind)) {
+    return { roughness: 0.24, metalness: 0.72 };
+  }
+  if (/pearlescent/i.test(kind)) {
+    return { roughness: 0.32, metalness: 0.68 };
+  }
+  if (/speckle/i.test(kind)) {
+    return { roughness: 0.44, metalness: 0.48 };
+  }
+  return { roughness: 0.66, metalness: 0.06 };
+}
+
 function createMaterialFactory(sceneData, set) {
   const cache = new Map();
   const emissiveReferences = new Set(set.material.emissiveReferences);
 
   return (reference) => {
     if (cache.has(reference)) return cache.get(reference);
-    const definition = sceneData.materials[String(reference)] || {
-      hex: "#A3A2A4",
-      transparent: false,
-      kind: "solid",
-    };
+    const definition = resolveMaterialDefinition(sceneData, set, reference);
     const transparent = Boolean(definition.transparent);
-    const isMetal = /metal|chrome/i.test(definition.kind);
+    const { roughness, metalness } = materialSurfaceProperties(definition.kind);
     const isEmissive = emissiveReferences.has(reference);
     const material = new THREE.MeshStandardMaterial({
       color: definition.hex,
-      roughness: isMetal ? 0.24 : 0.66,
-      metalness: isMetal ? 0.72 : 0.06,
+      roughness,
+      metalness,
       transparent,
       opacity: transparent ? (isEmissive ? 0.82 : 0.46) : 1,
       depthWrite: !transparent,
